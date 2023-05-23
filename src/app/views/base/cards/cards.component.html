@@ -1,0 +1,59 @@
+<section >
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form  [formGroup]="formdem" (ngSubmit)="savedem()">
+
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class=" txt  mb-0 me-3 p-5 " style="color: rgb(30, 30, 160);"><strong> Demande de congé </strong></p>
+            
+          </div>
+          <div class=" txt1 form-outline mb-4">
+            <label class="form-label txt1" for="InputMatricule"><strong><i> Matricule</i></strong></label>
+            <input type="text"  formControlName="mat_Pers" id="mat_Pers" class="form-control form-control-lg" />
+          </div>
+          
+
+          <!--  Date de demande -->
+          <div class=" txt1 form-outline mb-4">
+            <label class="form-label" for="form3Example3">Date de demande</label>
+            <input type="date"  id="DATE_DEMANDE"   formControlName="DATE_DEMANDE" class="form-control form-control-lg" />
+          </div>
+
+          <!-- Début de congé -->
+          <div class="txt1 form-outline mb-4">
+            <label class="form-label" for="form3Example3">Début de congé</label>
+            <input type="date" id="conge_Temps_Debut" formControlName="conge_Temps_Debut" class="form-control form-control-lg" />
+          </div>
+          <!-- Fin de congé -->
+          <div class=" txt1 form-outline mb-4">
+            <label class="form-label" for="form3Example3">Fin de congé</label>
+            <input type="date" id="conge_Temps_Fin" formControlName=" conge_Temps_Fin" class="form-control form-control-lg" />
+          </div>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label txt1">Ajouter un fichier</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+          <!--<div class="mb-3">
+            <label for="disabledSelect" class="form-label txt1"><i>type de demande</i> </label>
+              <select id="disabledSelect" class="form-select">
+                <option>selectionner votre type de demande</option>
+                <option>congé de matérnite</option>
+                <option>congé de maladie </option>
+                <option>congé de paternité</option>
+                <option>congé de travail</option>
+                <option>congé de vacances</option>
+              </select>
+          </div>-->
+          <button type="submit" class="btn btn-outline-warning">Enregistrer</button>
+          </form>
+      </div>
+    </div>
+  </div>
+ 
+
+</section>

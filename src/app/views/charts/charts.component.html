@@ -1,0 +1,145 @@
+<div class="container-fluid">
+  
+  <div class="row">
+    
+    
+
+  
+ 
+
+    <div class="col-4" id="calender">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-sm-flex flex-wrap">
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-primary"
+                  ><div class="ti">
+                    {{ "Repos hebdomadaire" }}
+                  </div></span
+                >
+              </div>
+            </h4>
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-success"
+                  ><div class="ti">
+                    {{ "Jour chaumé paye"  }}
+                  </div></span
+                >
+              </div>
+            </h4>
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-info"
+                  ><div class="ti">{{ "Congé annuel"  }}</div></span
+                >
+              </div>
+            </h4>
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-warning"
+                  ><div class="ti">
+                    {{ "Congé de maladie ordinaire"  }}
+                  </div></span
+                >
+              </div>
+            </h4>
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-danger"
+                  ><div class="ti">
+                    {{ "Décès d'ascendants et collatéraux direct" }}
+                  </div></span
+                >
+              </div>
+            </h4>
+            <h4>
+              <div class="card-body text-center">
+                <span class="badge rounded-pill bg-dark"
+                  ><div class="ti">{{ "Autres"  }}</div></span
+                >
+              </div>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <ng-template #editmodalShow let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title">Informations</h5>
+          <button
+            type="button"
+            class="btn-close"
+            aria-hidden="true"
+            
+          ></button>
+        </div>
+        <div class="modal-body p-4">
+          <form >
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label class="control-label">Titre</label>
+                  <input
+                    class="form-control"
+                    placeholder="Insert Event Name"
+                    type="text"
+                    name="editTitle"
+                    formControlName="editTitle"
+                    readonly
+                    style="text-align: center"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label class="control-label">Date debut</label>
+                  <input
+                    class="form-control"
+                    placeholder="Insert Event Name"
+                    type="text"
+                    name="dateC"
+                    formControlName="dateC"
+                    style="text-align: center"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-3">
+                  <label class="control-label">Date fin</label>
+                  <input
+                    class="form-control"
+                    placeholder="Insert Event Name"
+                    type="text"
+                    name="fin"
+                    formControlName="fin"
+                    readonly
+                    style="text-align: center"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-6"></div>
+              <div class="col-6 text-end">
+                <button
+                  type="button"
+                  class="btn btn-light"
+                  
+                >
+                  Fermé
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

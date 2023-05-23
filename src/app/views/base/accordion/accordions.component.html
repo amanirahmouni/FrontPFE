@@ -1,0 +1,61 @@
+<section>
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="formdem" (ngSubmit)="savedem()">
+
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class=" txt  mb-0 me-3 p-5 txt " style="color: rgb(30, 30, 160);"><strong> Demande de prets </strong></p>
+
+          </div>
+
+
+          <div class=" txt1 form-outline mb-4">
+            <label for="InputMatricule" class="form-label txt1"><strong><i> Matricule</i></strong></label>
+            <input type="text" formControlName="mat_Pers" id="mat_Pers" class="form-control form-control-lg"
+              aria-describedby="emailHelp" />
+          </div>
+
+          <!--  Date de demande -->
+          <div class=" txt1 form-outline mb-4">
+            <label for="Inputdate" class="form-label txt1"><strong> Date de demande</strong></label>
+            <input type="date" id="DATE_DEMANDE" formControlName="DATE_DEMANDE" class="form-control form-control-lg" />
+          </div>
+
+          <!-- Début de congé -->
+          <div class="txt1 form-outline mb-4">
+            <label class="form-label txt1" for="Inputmontant"><strong> Montant</strong></label>
+            <input type="text" id="montant_Demande" formControlName="montant_Demande"
+              class="form-control form-control-lg" placeholder="saisir un montant" />
+          </div>
+
+
+          <!-- <div class="mb-3">
+            <label for="disabledSelect" class="form-label txt1"><i><strong> type de prets</strong></i> </label>
+              <select id=""  formControlName="" class="form-select">
+                <option >selectionner votre type de prets </option>
+                <option value="">pret sur salaire </option>
+                <option value="">pret cnss </option>
+                <option value="">pret immobilier</option>
+                <option value="">pret sociale</option>
+                <option value="">pret bancaire</option>
+              </select>
+          </div> -->
+          <div class="mb-3">
+            <label for="inputtext" class="form-label"><i><strong> Text demande</strong></i></label>
+            <textarea class="form-control" formControlName="text_Demande" id="text_Demande" rows="3"
+              placeholder="Ecrire quelque chose"></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-warning">Enregistrer</button>
+          <!-- <button  class="btn btn-outline-warning " routerLink="/gestion">Consulter</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</section>

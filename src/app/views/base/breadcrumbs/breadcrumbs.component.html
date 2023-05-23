@@ -1,0 +1,67 @@
+<section >
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="formdem" (ngSubmit)="savedem()">
+
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start txt">
+            <p class=" txt  mb-0 me-3 p-5 " style="color: rgb(30, 30, 160);font-size: 30px;"><strong><i> Demande d'autorisation </i></strong></p>
+            
+          </div>
+          <div class=" txt1 form-outline mb-4">
+            <label class="form-label txt1" for="InputMatricule"><strong><i> Matricule</i></strong></label>
+            <input type="text" formControlName="mat_Pers" id="mat_Pers" class="form-control form-control-lg" />
+          </div>
+
+          
+
+          <!--  Date de demande -->
+          <div class=" txt1 form-outline mb-4">
+            <label class="form-label txt1" for="Inputdatedemande" ><strong><i> Date de demande</i></strong></label>
+            <input type="date" formControlName="DATE_DEMANDE" id="DATE_DEMANDE" class="form-control form-control-lg" />
+          </div>
+
+          <!-- Début de congé -->
+          <div class="txt1 form-outline mb-4">
+              <label class="form-label" for="InputHeuresortie"><strong><i> Heure Sortie </i></strong></label>
+              <input type="number" formControlName="heure_Sortie" id="heure_Sortie"class="form-control form-control-lg" />
+            </div>
+
+            <div class="txt1 form-outline mb-4">
+              <label class="form-label" for="InputHeureretour"><strong><i> Heure Retour </i></strong></label>
+              <input type="number" formControlName="heure_Retour" id="heure_Retour"class="form-control form-control-lg" />
+            </div>
+           
+
+           
+            
+          
+          <!-- <div class="mb-3">
+            <label for="disabledSelect" class="form-label txt1"><i><strong> Type autorisation</strong></i> </label>
+              <select id="disabledSelect" class="form-select">
+                <option>selectionner votre type d'autorisation </option>
+                <option>autorisation de sortie de travail </option>
+                <option> autorisation de sortie </option>
+                <option>autorisation de </option>
+                <option>pret sociale</option>
+                <option>pret bancaire</option>
+              </select>
+          </div> -->
+          <div class="mb-3">
+            <label for="inputtext" class="form-label"><i><strong> Text demande</strong></i></label>
+            <textarea class="form-control" formControlName="text_Demande" id="text_Demande" rows="3" placeholder="Ecrire quelque chose"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-outline-warning" >Enregistrer</button>
+         
+          </form>
+      </div>
+    </div>
+  </div>
+ 
+
+</section>>

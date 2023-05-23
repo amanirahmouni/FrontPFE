@@ -1,0 +1,33 @@
+:host ::ng-deep .accordion-custom {
+  .accordion-button {
+    background-color: var(--cui-dark);
+    color: var(--cui-white);
+  }
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+.txt{
+font-family: 'Rampart One', cursive;
+font-family: 'Tilt Neon', cursive;
+color: rgb(29, 29, 163);
+font-size: 30px;
+font-style: italic;
+}
+.txt1{
+font-family: 'DM Serif Display', serif;
+font-family: 'Rampart One', cursive;
+font-family: 'Tilt Neon', cursive;
+}

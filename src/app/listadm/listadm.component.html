@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des demandes par l'administateur</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div  ngif ="admin()">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Gestion des demandes par l'administateur</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>            
+            </div>
+        </nav>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Matricule</th>
+                    <th scope="col">Date de demande</th>
+                    <th scope="col">Type de Demande</th>
+                    <th scope="col" class="text-center">Texte demande</th>
+                    <th scope="col" class="text-center">Statut</th>
+
+                    <th scope="col" class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let demande of demandes">
+                    <th scope="row">{{demande.id}}</th>
+                    <td class="align-middle">{{demande.mat_Pers}}</td>
+                    <td class="align-middle">{{demande.date_Demande}}</td>
+                    <td class="align-middle">{{demande.type_Demande}}</td>
+                    <td class="align-middle text-center">{{demande.text_Demande}}</td>
+                    <td class="align-middle text-center">{{demande.texte_Reponse}}</td>
+
+                    <td class="align-middle text-center">
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-outline-success me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="valider(demande.id)">Valider</button>
+
+                            <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#annuler" (click)="valider(demande.id)">Annuler</button>
+                        </div>
+                    </td>
+                </tr>
+             
+             
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ModalV -->
+    <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="editEmployeeLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editEmployeeLabel">Validation de la demande</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    la demande est validée ! 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!--ModalAn-->
+    <div class="modal fade" id="annuler" tabindex="-1" aria-labelledby="annulerLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editEmployeeLabel">Annulation de la demande</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    la demande est annulée ! 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        
+    
+
+    </script>
+    
+</div>
+</body>
+</html>
